@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 //background colors:
 $color-1:#585DFE; 
 $color-2:#FB3796; 
 $color-3:#1A1921; 
 $bg-content:#ffffff; 
-$bg-text:#ffffff; 
+$text_white:#ffffff; 
+$text_black:#000;
 
 
 $body-font:'Share Tech Mono',
@@ -22,52 +22,84 @@ $hdtv : 1920px;
 body {
     margin: 0;
     padding: 0;
-    background-color: $color-3;
+    // background-color: $color-3;
     
 }
 
 .container{
+    
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: 30.375em 30.375em;
+  grid-template-rows: 30.375em 30.375em;
+  padding-left:25rem;
+ 
+    color: $color-3;
+    border:$color-3;
+    
+}
 
-max-width: 960px;
-margin: 0;
-display:grid;
-grid-template-columns: 34.375rem 34.375rem;
-grid-template-rows: 34.375rem 34.375rem;
-grid-gap: 36px;
+.box{
+    
+    background-color: $color-3;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    border: $color-1;
+}
+.box_in{
+    
+    background-color: $bg-content;
+    font-size:1.5em;
+    padding: 1.3rem;
+    border-radius: 0.4em;
+    position:relative;
+    top:150px;
+    z-index:2;
+    
+}
 
-
+.length,.vol,.mass{
+    display:flex;
+    justify-content: left;
+    font-size: 1rem;
+    padding: 0.8rem;
+    color: $text_black;
+    font-family: 'Inter', sans-serif;
+    
 
 }
 
-.card_1,.card_2{
-background:$color-1;
-color: $bg-text;
-font-size: 1.3em;
-padding: 5.5em;
-border: $color-3 0.2em solid;
-}
-.card_3,.card_4{
-
-background:$color-1;
-color: $bg-text;
-font-size: 1.3em;
-padding: 5.5em;
-border: $color-3 0.2em solid;
-
-}
 
 
-.card-title-top{
-display: flex;
-align-items: flex-start;
-background:$color-2;
+// .card_1,.card_2{
+// background:$color-1;
+// color: $bg-text;
+// font-size: 1.3em;
+// padding: 5.5em;
+// border: $color-3 0.2em solid;
+// }
+// .card_3,.card_4{
 
-}
-.card-title-bottom{
-display: flex;
+// background:$color-1;
+// color: $bg-text;
+// font-size: 1.3em;
+// padding: 5.5em;
+// border: $color-3 0.2em solid;
 
-background:$color-2;
+// }
+
+
+// .card-title-top{
+// display: flex;
+// align-items: flex-start;
+// background:$color-2;
+
+// }
+// .card-title-bottom{
+// display: flex;
+// background:$color-2;
 
 
 
-}
+// }
