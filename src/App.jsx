@@ -1,11 +1,15 @@
-import Fourblocks from "./components/Fourblocks";
+import TopRow from "./components/BottomRow/BottomRow";
+import BottomRow from "./components/TopRow/TopRow";
 import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-     
-      <Fourblocks />
+      <BottomRow />
+      <BottomRow />
+      <TopRow />
+      <TopRow />
+      
     </div>
   );
 }
