@@ -1,36 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import "./styles/variables.scss";
 
-*{
-
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-font-family: Inter;
-background-color: rgb(41, 44, 44);
-    
+body {
+  font-family: Inter;
+  background-color: rgb(41, 44, 44);
 }
-
-
-//background colors:
-$color-1:#585DFE; 
-$color-2:#FB3796; 
-$color-3:#1A1921; 
-$bg-content:#ffffff; 
-$text_white:#ffffff; 
-$text_black:#000;
-
-
-$body-font:'Share Tech Mono',
-'monospace';
-
-// media defaults
-$mobile : 576px;
-$tablet : 768px;
-$laptop : 992px;
-$desktop :1250px;
-$hdtv : 1920px;
-

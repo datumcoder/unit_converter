@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+@import "../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: column;
+
+  @media (max-width: $hdtv) {
+    background-color: rgb(255, 0, 0);
+    flex-direction: row;
+  }
+
+  @media (max-width: $desktop) {
+    flex-direction: column;
+    background-color: rgb(0, 255, 162);
+  }
+
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    background-color: rgb(139, 188, 167);
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    background-color: rgb(227, 164, 164);
+  }
+
+  // NOTE: I just nest media queries inside .container class
+  // in Sass you don't need to define to which class those rules apply - if they nest inside class, they will modify only this class
+  //
+  // OLD VERSION EXAMPLE:
+  // @media (max-width: $hdtv) {
+  // .container {                                <-- this is being removed
+  //     background-color: rgb(255, 0, 0);
+  //     flex-direction: row;
+  //   }
+  // }
+}
+
+.card {
+  width: 550px;
+  height: 550px;
+  color: white;
+  font-size: 90px;
+  margin: 0.5rem;
+  background-position: top;
+  background-image: linear-gradient(
+    230deg,
+    hsl(238deg 100% 69%) 0%,
+    hsl(255deg 90% 67%) 12%,
+    hsl(269deg 80% 64%) 27%,
+    hsl(282deg 71% 60%) 41%,
+    hsl(294deg 63% 56%) 54%,
+    hsl(305deg 65% 55%) 66%,
+    hsl(314deg 75% 56%) 76%,
+    hsl(320deg 84% 57%) 85%,
+    hsl(326deg 91% 59%) 93%,
+    rgb(248, 26, 133) 100%
+  );
+
+  &__result {
+    text-align: center;
+    font-size: 90px;
+    padding-top: 2rem;
+  }
+
+  &__part {
+    width: 550px;
+    height: 275px;
+  }
+
+  &__description {
+    font-size: 40px;
+
+    &--white {
+      background-color: white;
+      color: black;
+    }
+
+    &--dark {
+      background-color: #1f2937;
+      color: #d2d2d2;
+    }
+  }
+}
+
+.paragraph {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  padding-top: 1rem;
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.2rem;
+
+    // NOTE: those two classes are not necessary,
+    // because color is define by .card__description--white and .card__description--dark,
+    // so they can be removed
+    // &--white {
+    //   color: white;
+    // }
+    // &--dark {
+    //   color: rgb(8, 8, 8);
+    // }
+
+    &--upper {
+      font-size: 1.3rem;
+      padding-top: 3rem;
+    }
+  }
+}
