@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+body{
+
+font-family: Inter;
+background-color: rgb(41, 44, 44);
+    
+}
+
+
+//background colors:
+$color-1:#585DFE; 
+$color-2:#FB3796; 
+$color-3:#1A1921; 
+$bg-content:#ffffff; 
+$text_white:#ffffff; 
+$text_black:#000;
+
+
+$body-font:'Share Tech Mono',
+'monospace';
+
+// media defaults
+
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop :1250px;
+$hdtv : 3920px;
+
+
+.container{
+
+width: 100%;
+background-color: black;
+
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+flex-flow:column;
+
+}
+
+
+.box{
+    
+    
+    width: 550px;
+    height: 550px;
+    color: white;
+    font-size: 90px;
+    margin: 0.5rem;
+    background-position: top;
+    background-image: linear-gradient(
+        230deg,
+  hsl(238deg 100% 69%) 0%,
+  hsl(255deg 90% 67%) 12%,
+  hsl(269deg 80% 64%) 27%,
+  hsl(282deg 71% 60%) 41%,
+  hsl(294deg 63% 56%) 54%,
+  hsl(305deg 65% 55%) 66%,
+  hsl(314deg 75% 56%) 76%,
+  hsl(320deg 84% 57%) 85%,
+  hsl(326deg 91% 59%) 93%,
+  rgb(248, 26, 133) 100%
+  );
+  
+  
+
+}
+
+.innerTop{
+
+   width: 550px;
+    height: 275px;
+    
+    
+
+
+}
+.innerBott_1{
+
+    width: 550px;
+    height: 275px;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+
+
+}
+.innerBott_2{
+
+    width: 550px;
+    height: 275px;
+    background-color:#1F2937;
+    color: #D2D2D2;
+    font-size: 40px;
+
+
+}
+
+
+p{
+    
+    
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+    padding-top: 1rem;
+}
+
+h1{
+
+    text-align: center;
+    font-size: 90px;
+    padding-top: 2rem;
+}
+
+#info-title{
+
+color: white;
+font-size: 1.2rem;
+font-weight: 900;
+
+}
+#info-title-top{
+
+    color: rgb(8, 8, 8);
+    font-size: 1.2rem;
+    font-weight: 900;
+   
+    
+}
+
+.cube-title{
+font-weight: 900;
+padding-top:3rem;
+font-size: 1.3rem;
+
+}
+
+#result{
+
+    font-size: 8rem;
+}
+
+
+
+ @media (max-width: $hdtv){
+          .container {
+            background-color: rgb(255, 0, 0);
+            flex-direction: row;
+        
+        } 
+        
+
+        }
+
+
+@media (max-width: $desktop){
+    
+    .container {
+        
+        flex-direction:column;
+        background-color: rgb(0, 255, 162);
+    
+   } 
+}
+
+
+
+@media (max-width: $laptop){
+    .container{
+   
+        flex-direction: column;
+        background-color: rgb(139, 188, 167);
+    
+    } 
+    
+}
+@media (max-width: $tablet){
+    .container{
+        flex-direction: column;
+        background-color: rgb(227, 164, 164);
+        
+    } 
+    
+}
+       

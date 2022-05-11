@@ -1,14 +1,14 @@
-import TopRow from "./components/BottomRow/BottomRow";
-import BottomRow from "./components/TopRow/TopRow";
+
+import Cube from "./components/Cube/Cube";
 import "./App.scss";
+import "./components/Cube/Cube.scss";
 
 function App() {
   return (
     <div className="App">
-      <BottomRow />
-      <BottomRow />
-      <TopRow />
-      <TopRow />
+      <Cube />
+    
+
       
     </div>
   );
