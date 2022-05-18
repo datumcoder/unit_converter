@@ -1,45 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
 @import "../../styles/variables.scss";
-
-.container {
-  width: 100%;
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: column;
-
-  @media (max-width: $hdtv) {
-    background-color: rgb(255, 0, 0);
-    flex-direction: row;
-  }
-
-  @media (max-width: $desktop) {
-    flex-direction: column;
-    background-color: rgb(0, 255, 162);
-  }
-
-  @media (max-width: $laptop) {
-    flex-direction: column;
-    background-color: rgb(139, 188, 167);
-  }
-
-  @media (max-width: $tablet) {
-    flex-direction: column;
-    background-color: rgb(227, 164, 164);
-  }
-
-  // NOTE: I just nest media queries inside .container class
-  // in Sass you don't need to define to which class those rules apply - if they nest inside class, they will modify only this class
-  //
-  // OLD VERSION EXAMPLE:
-  // @media (max-width: $hdtv) {
-  // .container {                                <-- this is being removed
-  //     background-color: rgb(255, 0, 0);
-  //     flex-direction: row;
-  //   }
-  // }
-}
 
 .card {
   width: 550px;
@@ -97,16 +56,6 @@
   &__title {
     font-weight: 900;
     font-size: 1.2rem;
-
-    // NOTE: those two classes are not necessary,
-    // because color is define by .card__description--white and .card__description--dark,
-    // so they can be removed
-    // &--white {
-    //   color: white;
-    // }
-    // &--dark {
-    //   color: rgb(8, 8, 8);
-    // }
 
     &--upper {
       font-size: 1.3rem;
