@@ -1,5 +1,10 @@
 # Diary
 
+## TODO: (homework)
+
+- read more about props and props.children
+- read more about map function inside react component
+
 ## 18/05/2022
 
 - created new **Container** component and removed duplication from **Card** component with related styles
