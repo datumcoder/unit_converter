@@ -13,6 +13,3 @@ const App = () => (
 
 export default App;
 
-// TODO:
-// - read more about props and props.children
-// - read more about map function inside react component
