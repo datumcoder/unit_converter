@@ -1,0 +1,52 @@
+.testContainer {
+  min-height: 10vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+  text-align: center;
+
+  &--1 {
+    background-color: crimson;
+  }
+
+  &--2 {
+    background-color: goldenrod;
+  }
+
+  &--3 {
+    background-color: skyblue;
+  }
+
+  &--4 {
+    background-color: yellowgreen;
+  }
+
+  &--5 {
+    background-color: violet;
+  }
+}
+
+.title {
+  &--1 {
+    color: #111;
+  }
+
+  &--2 {
+    color: #444;
+  }
+
+  &--3 {
+    color: #777;
+  }
+
+  &--4 {
+    color: white;
+  }
+
+  &--5 {
+    color: yellow;
+  }
+}
