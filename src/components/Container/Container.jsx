@@ -1,6 +1,6 @@
 import React from "react";
 import "./Container.scss";
 
-const Container = (props) => <div className="container">{props.children}</div>;
+const Container = ({ children }) => <div className="container">{children}</div>;
 
 export default Container;
