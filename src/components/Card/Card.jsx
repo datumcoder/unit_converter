@@ -4,7 +4,7 @@ const Card = (props) => (
   <div className="card">
     <div className="card__part">
       <p className="paragraph paragraph__title paragraph__title--upper">
-        Metric/lmperial conversion
+        Metric/Imperial conversion
       </p>
       <h1 className="card__result">0</h1>
     </div>

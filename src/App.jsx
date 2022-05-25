@@ -7,13 +7,9 @@ import { testData } from "./components/TestComponent/TestComponent.data";
 // const cardData = ["dark", "dark", "white", "white"];
 // const variants = cardData.map((data) => <Card variant={data} />);
 
-const getTestComponents = testData.map((data) => (
-  <TestComponent
-    containerStyle={data.styles.container}
-    titleStyle={data.styles.title}
-    title={data.title}
-  >
-    {data.content}
+const getTestComponents = testData.map(({ title, styles, content }) => (
+  <TestComponent containerStyle={styles.container} titleStyle={styles.title} title={title}>
+    {content}
   </TestComponent>
 ));
 
