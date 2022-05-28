@@ -1,13 +1,13 @@
-import Fourblocks from "./components/Fourblocks";
+import Card from "./components/Card/Card";
 import "./App.scss";
+import Container from "./components/Container/Container";
 
-function App() {
-  return (
-    <div className="App">
-     
-      <Fourblocks />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Container>
+      <Card variant={"dark"} />
+    </Container>
+  </div>
+);
 
 export default App;

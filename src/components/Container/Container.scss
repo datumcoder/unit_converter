@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: column;
+
+  @media (max-width: $hdtv) {
+    background-color: rgb(255, 0, 0);
+    flex-direction: row;
+  }
+
+  @media (max-width: $desktop) {
+    flex-direction: column;
+    background-color: rgb(0, 255, 162);
+  }
+
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    background-color: rgb(139, 188, 167);
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    background-color: rgb(227, 164, 164);
+  }
+}
