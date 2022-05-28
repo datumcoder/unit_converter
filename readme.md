@@ -4,8 +4,8 @@
 
 - introduced **@extend** Sass rule (more [here](https://sass-lang.com/documentation/at-rules/extend))
 - introduced **darken** Sass function (more [here](https://sass-lang.com/documentation/modules/color#darken))
-- replaced _h1_ with _input_
-- used ternary operator to protect component in the case of a lack of props
+- replaced **h1** with **input**
+- used ternary operator to protect **Card** component in the case of a lack of props
 
 ## 25/05/2022
 
