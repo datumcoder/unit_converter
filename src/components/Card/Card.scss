@@ -21,13 +21,43 @@
     rgb(248, 26, 133) 100%
   );
 
-  &__result {
+  &__title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.3rem;
+    padding-top: 3rem;
+  }
+
+  &__input {
     text-align: center;
     font-size: 90px;
     padding-top: 2rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: $text_white;
+    font-family: inherit;
+
+    &::placeholder {
+      font-size: 50%;
+      color: darken($text_white, 20%);
+    }
+
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 
-  &__part {
+  &__partBlock {
     width: 550px;
     height: 275px;
   }
@@ -36,11 +66,13 @@
     font-size: 40px;
 
     &--white {
+      @extend .card__description;
       background-color: white;
       color: black;
     }
 
     &--dark {
+      @extend .card__description;
       background-color: #1f2937;
       color: #d2d2d2;
     }
@@ -54,12 +86,8 @@
   padding-top: 1rem;
 
   &__title {
+    @extend .paragraph;
     font-weight: 900;
     font-size: 1.2rem;
-
-    &--upper {
-      font-size: 1.3rem;
-      padding-top: 3rem;
-    }
   }
 }
