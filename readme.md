@@ -1,9 +1,8 @@
 # Diary
 
-## TODO: (homework)
+## 25/05/2022
 
-- read more about props and props.children
-- read more about map function inside react component
+- object destructuring
 
 ## 18/05/2022
 
