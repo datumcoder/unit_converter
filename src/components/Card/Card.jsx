@@ -6,7 +6,7 @@ const Card = ({ variant }) => (
       <h1 className="card__title">Metric/Imperial conversion</h1>
       <input type="number" className="card__input" placeholder="Type number" />
     </div>
-    <div className={`card__partBlock card__description--${variant ? "dark" : "white"}`}>
+    <div className={`card__partBlock card__description--${variant ? variant : "white"}`}>
       <p className="paragraph__title">Length (Meter/Feet)</p>
       <p className="paragraph">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
 
