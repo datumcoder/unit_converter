@@ -5,7 +5,7 @@ import Container from "./components/Container/Container";
 const App = () => (
   <div className="App">
     <Container>
-      <Card variant={"dark"} />
+      <Card />
     </Container>
   </div>
 );
