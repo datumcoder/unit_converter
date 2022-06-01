@@ -1,5 +1,12 @@
 # Diary
 
+## 01/06/2022
+
+- implemented useState to store conversion value
+- used value fro useState as a input value (controlled component - [more](https://blog.logrocket.com/controlled-vs-uncontrolled-components-in-react/) about controlled and uncontrolled components)
+- implemented method to change state dynamically - **onChange**
+- added value conversion for length units (_however code need to be refactored_)
+
 ## 28/05/2022
 
 - introduced **@extend** Sass rule (more [here](https://sass-lang.com/documentation/at-rules/extend))
