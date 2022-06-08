@@ -1,18 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Card.scss";
 
+const baseUnits = {
+  meters: 0,
+  feet: 0,
+  liters: 0,
+  gallons: 0,
+  kilos: 0,
+  pounds: 0,
+};
+
 const Card = ({ variant }) => {
-  const [value, setValue] = useState();
-  const [meters, setMeters] = useState(0);
-  const [feet, setFeet] = useState(0);
+  const [value, setValue] = useState("");
+  const [units, setUnits] = useState(baseUnits);
 
   const handleInput = (e) => {
-    console.log("before setValue", value);
-    setValue(e.target.value);
-    console.log("after setValue", value);
-    setMeters((e.target.value * 3.2808399).toFixed(2));
-    setFeet((e.target.value * 0.3048).toFixed(2));
+    if (e.target.value.length < 7) {
+      setValue(e.target.value);
+    }
   };
+
+  useEffect(() => {
+    setUnits({
+      meters: (value * 3.2808399).toFixed(2),
+      feet: (value * 0.3048).toFixed(2),
+      liters: (value * 0.264172).toFixed(2),
+      gallons: (value * 4.54609).toFixed(2),
+      kilos: (value * 2.20462).toFixed(2),
+      pounds: (value * 0.45359237).toFixed(2),
+    });
+  }, [value]);
 
   return (
     <div className="card">
@@ -30,18 +47,16 @@ const Card = ({ variant }) => {
         <p className="paragraph__title">Length (Meter/Feet)</p>
         <p className="paragraph">
           {value || 0} meters = {meters} feet | {value || 0} feet = {feet} meters
-          {/* {value} meters = {(value * 3.2808399).toPrecision(2)} feet | {value} feet ={" "}
-          {(value * 0.3048).toPrecision(2)} meters */}
         </p>
 
         <p className="paragraph__title">Volume (Liters/GaIIons)</p>
         <p className="paragraph">
-          {value} liters = 0.000 gallons | {value} gallons = 0.000 liters
+          {value || 0} liters = {liters} gallons | {value || 0} gallons = {gallons} liters
         </p>
 
         <p className="paragraph__title">Mass (Kilograms/Pounds)</p>
         <p className="paragraph">
-          {value} kilos = 0.000 pounds | {value} pounds = 0.000 kilos
+          {value || 0} kilos = {kilos} pounds | {value || 0} pounds = {pounds} kilos
         </p>
       </div>
     </div>
