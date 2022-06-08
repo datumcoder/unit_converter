@@ -8,7 +8,7 @@
 
 ## 01/06/2022
 
-- implemented **implementation** to store conversion value
+- implemented **useState** to store conversion value
 - used value fro useState as a input value (controlled component - [more](https://blog.logrocket.com/controlled-vs-uncontrolled-components-in-react/) about controlled and uncontrolled components)
 - implemented method to change state dynamically - **onChange**
 - added value conversion for length units (_however code need to be refactored_)
