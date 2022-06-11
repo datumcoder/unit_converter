@@ -43,20 +43,27 @@ const Card = ({ variant }) => {
           onChange={(e) => handleInput(e)}
         />
       </div>
-      <div className={`card__partBlock card__description--${variant ? variant : "white"}`}>
+      <div
+        className={`card__partBlock card__description--${
+          variant ? variant : "white"
+        }`}
+      >
         <p className="paragraph__title">Length (Meter/Feet)</p>
         <p className="paragraph">
-          {value || 0} meters = {meters} feet | {value || 0} feet = {feet} meters
+          {value || 0} meters = {[units.meters]} feet | {value || 0} feet ={" "}
+          {[units.feet]} meters
         </p>
 
         <p className="paragraph__title">Volume (Liters/GaIIons)</p>
         <p className="paragraph">
-          {value || 0} liters = {liters} gallons | {value || 0} gallons = {gallons} liters
+          {value || 0} liters = {[units.liters]} gallons | {value || 0} gallons
+          = {[units.gallons]} liters
         </p>
 
         <p className="paragraph__title">Mass (Kilograms/Pounds)</p>
         <p className="paragraph">
-          {value || 0} kilos = {kilos} pounds | {value || 0} pounds = {pounds} kilos
+          {value || 0} kilos = {[units.kilos]} pounds | {value || 0} pounds ={" "}
+          {[units.pounds]} kilos
         </p>
       </div>
     </div>
