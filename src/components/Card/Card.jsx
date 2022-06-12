@@ -15,19 +15,19 @@ const Card = ({ variant }) => {
   const [units, setUnits] = useState(baseUnits);
 
   const handleInput = (e) => {
-    if (e.target.value.length < 7) {
+    if (e.target.value.length < 6) {
       setValue(e.target.value);
     }
   };
 
   useEffect(() => {
     setUnits({
-      meters: (value * 3.2808399).toFixed(2),
-      feet: (value * 0.3048).toFixed(2),
-      liters: (value * 0.264172).toFixed(2),
-      gallons: (value * 4.54609).toFixed(2),
-      kilos: (value * 2.20462).toFixed(2),
-      pounds: (value * 0.45359237).toFixed(2),
+      meters: (value * 0.3048).toFixed(2),
+      feet: (value * 3.2808399).toFixed(2),
+      liters: (value * 4.54609).toFixed(2),
+      gallons: (value * 0.264172).toFixed(2),
+      kilos: (value * 0.45359237).toFixed(2),
+      pounds: (value * 2.20462).toFixed(2),
     });
   }, [value]);
 
@@ -46,17 +46,18 @@ const Card = ({ variant }) => {
       <div className={`card__partBlock card__description--${variant ? variant : "white"}`}>
         <p className="paragraph__title">Length (Meter/Feet)</p>
         <p className="paragraph">
-          {value || 0} meters = {meters} feet | {value || 0} feet = {feet} meters
+          {value || 0} meters = {units.feet} feet | {value || 0} feet = {units.meters} meters
         </p>
 
         <p className="paragraph__title">Volume (Liters/GaIIons)</p>
         <p className="paragraph">
-          {value || 0} liters = {liters} gallons | {value || 0} gallons = {gallons} liters
+          {value || 0} liters = {units.gallons} gallons | {value || 0} gallons = {units.liters}{" "}
+          liters
         </p>
 
         <p className="paragraph__title">Mass (Kilograms/Pounds)</p>
         <p className="paragraph">
-          {value || 0} kilos = {kilos} pounds | {value || 0} pounds = {pounds} kilos
+          {value || 0} kilos = {units.pounds} pounds | {value || 0} pounds = {units.kilos} kilos
         </p>
       </div>
     </div>
